@@ -30,7 +30,7 @@ dailySteps <- tapply(data.rm$steps, data.rm$date, sum)
 '''
 
 The historgram of the total number of steps taken each day is:
-'''hist(dailySteps, breaks=20, col="red",
+'''hist(dailySteps, breaks=20, col="#FF6659",
      xlab="Day", ylab="Frequency",
      main="Total number of steps taken each day")
 '''
@@ -44,7 +44,7 @@ median(dailySteps)
 ## What is the average daily activity pattern?
 The time series plot of the 5-minute interval and the average number of steps taken, averaged across all days is:
 '''dailyAct <- tapply(data.rm$steps, data.rm$interval, mean)
-plot(y=dailyAct, x=names(dailyAct), type="l",
+plot(y=dailyAct, x=names(dailyAct), type="l", col="#00C2C2", lwd=2,
      xlab="5-minute-intervals", ylab="Average number of steps",
      main="Daily Activity Pattern")
 '''
@@ -70,7 +70,7 @@ sum(is.na(data.nw))
 
 The histogram of the total number of steps taken each day is:
 ''' <- tapply(data.nw$steps, data.nw$date, sum)
-hist(dailySteps.nw, breaks=20, col="red",
+hist(dailySteps.nw, breaks=20, col="#FF6659",
      xlab="Day", ylab="Frequency",
      main="Total number of steps taken each day")
 '''
